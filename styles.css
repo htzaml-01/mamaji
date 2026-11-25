@@ -217,28 +217,26 @@ button {
    Hero Section (Compact Framed Hero Asset + Scroll Notch)
    ============================================================ */
 .hero-section {
-  background: radial-gradient(circle at 55% 45%, #9A5228 0%, #83421D 100%);
+  background-color: #894821;
   position: relative;
-  padding: 10px 0 18px;
+  padding: 12px 16px 26px;
 }
 
 .hero-media-frame {
   position: relative;
   width: fit-content;
-  max-width: min(980px, 96%);
+  max-width: min(1040px, 100%);
   margin: 0 auto;
-  overflow: hidden;
-  border-radius: 14px;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 3.5%, #000 96.5%, transparent 100%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 3.5%, #000 96.5%, transparent 100%);
 }
 
 .hero-asset-img {
   width: auto;
   max-width: 100%;
-  max-height: 54vh;
+  max-height: 60vh;
   height: auto;
   display: block;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
 /* Transparent interactive button aligned cleanly over the baked-in "ORDER NOW" pill */
@@ -1077,19 +1075,17 @@ button {
   }
 
   .hero-section {
-    padding: 0;
+    padding: 8px 8px 22px;
   }
 
   .hero-media-frame {
     max-width: 100%;
-    border-radius: 0;
-    mask-image: none;
-    -webkit-mask-image: none;
   }
 
   .hero-asset-img {
     width: 100%;
     max-height: none;
+    border-radius: 8px;
   }
 
   .hero-notch {
