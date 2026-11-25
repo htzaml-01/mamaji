@@ -5,7 +5,7 @@
      ========================================================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Rubik:wght@800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
 <style>
   .rmm-showcase * {
@@ -25,15 +25,33 @@
     margin: 0 auto;
   }
 
+  .rmm-editorial-split {
+    max-width: 960px;
+    margin: 0 auto 48px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: end;
+    gap: 36px;
+  }
+
   .rmm-editorial-heading {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(32px, 4.4vw, 54px);
-    font-weight: 700;
-    line-height: 1.02;
-    letter-spacing: -0.03em;
-    text-align: center;
-    color: #BA4522;
-    margin: 0 0 48px;
+    font-family: 'Rubik', 'DM Sans', sans-serif;
+    font-size: clamp(50px, 7.2vw, 92px);
+    font-weight: 900;
+    line-height: 0.88;
+    letter-spacing: -0.045em;
+    text-align: left;
+    color: #3A1912;
+    margin: 0;
+  }
+
+  .rmm-editorial-lead {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #6C4D40;
+    max-width: 340px;
+    justify-self: end;
   }
 
   .rmm-carousel {
@@ -249,6 +267,17 @@
       padding: 52px 0 64px;
     }
 
+    .rmm-editorial-split {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-bottom: 36px;
+    }
+
+    .rmm-editorial-lead {
+      justify-self: start;
+      max-width: 100%;
+    }
+
     .rmm-carousel-slide {
       flex: 0 0 min(78vw, 330px);
     }
@@ -274,10 +303,17 @@
 
 <section class="rmm-showcase" id="cerita">
   <div class="rmm-showcase-container">
-    <h1 class="rmm-editorial-heading">
-      Masakan Minang.<br />
-      Kehangatan Rumah.
-    </h1>
+    <div class="rmm-editorial-split">
+      <h1 class="rmm-editorial-heading">
+        Masakan<br />
+        Minang.<br />
+        Kehangatan<br />
+        Rumah.
+      </h1>
+      <p class="rmm-editorial-lead">
+        Dimasak perlahan selama 8 jam dengan santan murni dan rempah pilihan. Tersedia hangat setiap hari untuk makan siang maupun kemasan vacuum praktis untuk keluarga.
+      </p>
+    </div>
 
     <div class="rmm-carousel" id="rmmCarousel" aria-roledescription="carousel" aria-label="Galeri Varian Rendang Mamaji">
       <div class="rmm-carousel-stage">

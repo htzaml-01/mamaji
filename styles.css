@@ -17,7 +17,7 @@
   --ink-muted: #6C4D40;
   --white: #FFFFFF;
 
-  --font-serif: 'Fraunces', Georgia, serif;
+  --font-serif: 'Rubik', 'DM Sans', system-ui, sans-serif;
   --font-mono: 'Space Mono', ui-monospace, monospace;
   --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
 
@@ -297,15 +297,33 @@ button {
   padding: 72px 0 88px;
 }
 
+.editorial-intro-split {
+  max-width: 960px;
+  margin: 0 auto 48px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: end;
+  gap: 36px;
+}
+
 .editorial-heading {
   font-family: var(--font-serif);
-  font-size: clamp(2.1rem, 4.4vw, 3.35rem);
-  font-weight: 700;
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  text-align: center;
-  color: var(--terracotta);
-  margin: 0 0 48px;
+  font-size: clamp(3.2rem, 7.2vw, 5.75rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+  text-align: left;
+  color: var(--espresso);
+  margin: 0;
+}
+
+.editorial-lead {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  max-width: 340px;
+  justify-self: end;
 }
 
 .rendang-carousel {
@@ -549,11 +567,11 @@ button {
 
 .split-heading {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 3.6vw, 3rem);
-  line-height: 1.06;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin: 0 0 18px;
+  font-size: clamp(2.6rem, 5vw, 4.1rem);
+  line-height: 0.92;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin: 0 0 20px;
 }
 
 .split-copy {
@@ -740,10 +758,10 @@ button {
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 3.8vw, 2.95rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.025em;
+  font-size: clamp(2.6rem, 5.4vw, 4.25rem);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
   color: var(--espresso);
   margin: 0;
 }
@@ -799,8 +817,11 @@ button {
 
 .craft-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
-  margin: 0 0 10px;
+  font-size: 1.65rem;
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  margin: 0 0 12px;
 }
 
 .craft-card p {
@@ -861,8 +882,10 @@ button {
 
 .info-card h3 {
   font-family: var(--font-serif);
-  font-size: clamp(1.55rem, 2.5vw, 2rem);
-  line-height: 1.15;
+  font-size: clamp(1.85rem, 3vw, 2.55rem);
+  font-weight: 900;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
   margin: 0;
 }
 
@@ -1013,6 +1036,17 @@ button {
 @media (max-width: 680px) {
   .intro-showcase {
     padding: 52px 0 64px;
+  }
+
+  .editorial-intro-split {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 36px;
+  }
+
+  .editorial-lead {
+    justify-self: start;
+    max-width: 100%;
   }
 
   .carousel-slide {
