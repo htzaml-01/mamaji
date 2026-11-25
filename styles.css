@@ -214,173 +214,44 @@ button {
 }
 
 /* ============================================================
-   Hero Section (Pure HTML/CSS/SVG Layout over Clean Bowl Backdrop)
+   Hero Section (Full-Width Banner Image, Zero Cropping)
    ============================================================ */
 .hero-section {
-  background: #894821 url("Asset/hero-bowl-bg.jpg") no-repeat 74% 48% / cover;
+  background-color: #894821;
   position: relative;
-  overflow: hidden;
+  padding: 0;
+}
+
+.hero-media-frame {
+  position: relative;
   width: 100%;
-}
-
-.hero-inner {
-  width: min(1320px, 92%);
-  margin: 0 auto;
-  min-height: clamp(500px, 43vw, 620px);
-  padding: 36px 0 38px;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  align-items: stretch;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-left-col {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 10px;
-}
-
-.hero-flower {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-flower--tl {
-  width: clamp(105px, 11.5vw, 162px);
-  top: -16px;
-  left: -26px;
-}
-
-.hero-flower--mid {
-  width: clamp(110px, 12vw, 168px);
-  bottom: -36px;
-  right: -34px;
-}
-
-.hero-flower--dark {
-  position: relative;
-  width: clamp(92px, 9.5vw, 134px);
-  margin: 12px 0 10px 8px;
-}
-
-.hero-flower--tr {
-  width: clamp(110px, 11.5vw, 162px);
-  top: 28px;
-  right: -12px;
-  z-index: 0;
-}
-
-.hero-headline-wrap {
-  position: relative;
-  width: fit-content;
-  max-width: 100%;
-  z-index: 2;
-  margin-left: clamp(16px, 2.2vw, 34px);
-  padding-top: 18px;
-}
-
-.hero-pill-badge {
-  position: absolute;
-  top: 6px;
-  right: -14px;
-  transform: rotate(-8deg);
-  background-color: #F9D849;
-  color: #3A1912;
-  border: 1.5px solid #3A1912;
-  border-radius: var(--radius-pill);
-  padding: 6px 18px;
-  font-family: var(--font-sans);
-  font-size: clamp(0.72rem, 1.05vw, 0.95rem);
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(58, 25, 18, 0.16);
-  z-index: 3;
-}
-
-.hero-display-title {
-  position: relative;
-  z-index: 2;
-  font-family: var(--font-serif);
-  font-weight: 900;
-  font-size: clamp(2.85rem, 6vw, 5.2rem);
-  line-height: 0.85;
-  letter-spacing: -0.045em;
-  color: #3A1912;
+  max-width: none;
   margin: 0;
-  text-transform: uppercase;
 }
 
-.hero-cta-block {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  padding-left: clamp(6px, 1vw, 14px);
+.hero-asset-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.hero-order-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F9D849;
-  color: #3A1912;
+.hero-order-hotspot {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  width: 13.2%;
+  height: 7.5%;
   border-radius: var(--radius-pill);
-  padding: 10px 28px;
-  font-family: var(--font-sans);
-  font-size: clamp(0.88rem, 1.15vw, 1.05rem);
-  font-weight: 900;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  box-shadow: 0 8px 20px rgba(58, 25, 18, 0.2);
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  background: transparent;
+  padding: 0;
+  z-index: 4;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
 }
 
-.hero-order-btn:hover {
-  background-color: #FFE469;
+.hero-order-hotspot:hover {
+  box-shadow: 0 0 0 3px rgba(248, 214, 74, 0.55), 0 10px 24px rgba(58, 25, 18, 0.35);
   transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(58, 25, 18, 0.28);
-}
-
-.hero-brand-sub {
-  font-family: var(--font-sans);
-  font-size: clamp(0.9rem, 1.15vw, 1.05rem);
-  font-weight: 800;
-  color: #3A1912;
-  padding-left: 2px;
-}
-
-.hero-right-col {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.hero-mobile-bowl {
-  display: none;
-}
-
-.hero-tagline-right {
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  text-align: left;
-  font-family: var(--font-sans);
-  font-size: clamp(0.72rem, 0.96vw, 0.88rem);
-  font-weight: 800;
-  line-height: 1.28;
-  letter-spacing: 0.02em;
-  color: #3A1912;
-  text-transform: uppercase;
 }
 
 /* Cala-style semicircular cream scroll-down notch */
@@ -1203,94 +1074,21 @@ button {
   }
 
   .hero-section {
-    background-image: none;
-    background: radial-gradient(circle at 50% 45%, #9B5429 0%, #83421D 100%);
+    padding: 0;
   }
 
-  .hero-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: auto;
-    padding: 30px 0 42px;
-    gap: 20px;
+  .hero-media-frame {
+    max-width: none;
   }
 
-  .hero-left-col,
-  .hero-right-col {
-    display: contents;
-  }
-
-  .hero-headline-wrap {
-    order: 1;
-    margin: 6px auto 0;
-    padding: 16px 14px 4px;
-    text-align: center;
-  }
-
-  .hero-display-title {
-    font-size: clamp(2.55rem, 12.2vw, 3.6rem);
-  }
-
-  .hero-flower--tl {
-    width: 84px;
-    left: -14px;
-    top: -10px;
-  }
-
-  .hero-flower--mid {
-    width: 86px;
-    right: -14px;
-    bottom: -20px;
-  }
-
-  .hero-flower--dark,
-  .hero-flower--tr {
-    display: none;
-  }
-
-  .hero-pill-badge {
-    right: -6px;
-    top: -4px;
-    padding: 4px 12px;
-    font-size: 0.7rem;
-  }
-
-  .hero-mobile-bowl {
-    order: 2;
-    display: block;
-    width: min(300px, 82%);
-    aspect-ratio: 1 / 1;
-    border-radius: 24px;
-    border: 4px solid #F9D849;
-    box-shadow: 0 18px 36px rgba(58, 25, 18, 0.34);
-    object-fit: cover;
-  }
-
-  .hero-cta-block {
-    order: 3;
-    align-items: center;
-    text-align: center;
-    padding-left: 0;
-    margin-top: 2px;
-  }
-
-  .hero-order-btn {
-    padding: 12px 34px;
-    font-size: 0.95rem;
-  }
-
-  .hero-tagline-right {
-    order: 4;
-    text-align: center;
-    font-size: 0.76rem;
-    line-height: 1.45;
-    max-width: 300px;
+  .hero-asset-img {
+    width: 100%;
+    height: auto;
   }
 
   .hero-notch {
-    width: 36px;
-    height: 19px;
+    width: 34px;
+    height: 18px;
   }
 
   .floating-badge--top {
