@@ -20,4 +20,4 @@ Setiap section sudah dipisah menjadi file **Custom HTML mandiri** (menggunakan p
 3. Tarik widget **HTML** (*Custom HTML*) ke dalam container tersebut, lalu copy-paste isi file `01-...` sampai `07-...` satu per satu ke container masing-masing.
 4. **URL Gambar & Nomor WhatsApp**:
    - Gambar saat ini mengarah ke URL GitHub repo Anda (`https://raw.githubusercontent.com/htzaml-01/mamaji/main/Asset/...`). Anda juga bisa menggantinya dengan URL dari **WordPress Media Library** setelah upload gambar ke WP Admin.
-   - Ganti nomor WhatsApp `6281200000000` di file `04` dan `06` dengan nomor WhatsApp admin Rendang Mamaji yang aktif.
+   - Nomor WhatsApp sudah diarahkan ke `082323183770` (`https://wa.me/6282323183770`) dan alamat `Singapadu Riverview no.10 Gianyar Bali` langsung mengarah ke Google Maps.

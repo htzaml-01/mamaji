@@ -897,6 +897,27 @@ button {
   font-size: 0.94rem;
 }
 
+.info-inline-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.info-inline-link:hover {
+  opacity: 0.72;
+}
+
+.footer-contact-links a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-links a:hover {
+  color: var(--sunny);
+}
+
 /* ============================================================
    Footer
    ============================================================ */
