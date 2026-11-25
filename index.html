@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rendang Mamaji — Bold Aroma, Spicy Kick, Unforgettable Taste</title>
+  <meta
+    name="description"
+    content="Rendang Mamaji menghadirkan rendang otentik Minang yang dimasak perlahan selama 8 jam dengan rempah pilihan. Tersedia porsi siap santap, lauk pendamping, dan kemasan vacuum."
+  />
+
+  <!-- Google Fonts: Condensed Editorial Serif + Mono + Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Golden Top Navigation Bar (inspired by Cala) -->
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="Navigasi Utama">
+      <div class="nav-group nav-left">
+        <a href="#cerita" class="nav-link">CERITA KAMI</a>
+        <a href="#paket" class="nav-link">KEMASAN</a>
+        <a href="#galeri" class="nav-link">KEUNGGULAN</a>
+      </div>
+
+      <a href="#top" class="brand-logo" aria-label="Rendang Mamaji Beranda">
+        <svg class="brand-starburst" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+          <g transform="translate(32,32)">
+            <ellipse rx="4.2" ry="18" transform="rotate(0) translate(0,-11)" />
+            <ellipse rx="4.2" ry="18" transform="rotate(32.7) translate(0,-11)" />
+            <ellipse rx="4.2" ry="18" transform="rotate(65.4) translate(0,-11)" />
+            <ellipse rx="4.2" ry="18" transform="rotate(98.1) translate(0,-11)" />
+            <ellipse rx="4.2" ry="18" transform="rotate(130.9) translate(0,-11)" />
+            <ellipse rx="4.2" ry="18" transform="rotate(163.6) translate(0,-11)" />
+            <ellipse rx="4.2" ry="18" transform="rotate(196.3) translate(0,-11)" />
+            <ellipse rx="4.2" ry="18" transform="rotate(229) translate(0,-11)" />
+            <ellipse rx="4.2" ry="18" transform="rotate(261.8) translate(0,-11)" />
+            <ellipse rx="4.2" ry="18" transform="rotate(294.5) translate(0,-11)" />
+            <ellipse rx="4.2" ry="18" transform="rotate(327.2) translate(0,-11)" />
+          </g>
+        </svg>
+        <span class="brand-wordmark">Mamaji</span>
+      </a>
+
+      <div class="nav-group nav-right">
+        <a href="#kemitraan" class="nav-link">KEMITRAAN</a>
+        <a href="#pengiriman" class="nav-link">PESAN ANTAR</a>
+        <a href="#lokasi" class="nav-link">LOKASI</a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <div class="mobile-controls">
+        <button type="button" class="menu-toggle" id="mobileMenuToggle" aria-expanded="false" aria-label="Toggle menu navigasi">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="#cerita" class="mobile-nav-link">Cerita Kami</a>
+      <a href="#paket" class="mobile-nav-link">Kemasan Vacuum</a>
+      <a href="#galeri" class="mobile-nav-link">Keunggulan</a>
+      <a href="#kemitraan" class="mobile-nav-link">Kemitraan &amp; Hampers</a>
+      <a href="#lokasi" class="mobile-nav-link">Lokasi Dapur</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section using the user's exact widescreen hero asset -->
+    <section class="hero-section" aria-label="Banner Utama Rendang Mamaji">
+      <div class="hero-media-frame">
+        <img
+          src="Asset/Gemini_Generated_Image_iqyycoiqyycoiqyy%20(1).jpeg"
+          alt="Rendang Mamaji — Try, Definitely Return. Bold Aroma, Spicy Kick, Unforgettable Taste."
+          class="hero-asset-img"
+        />
+
+        <!-- Interactive transparent hotspot over the baked-in ORDER NOW button -->
+        <a
+          href="#pengiriman"
+          class="hero-order-hotspot"
+          aria-label="Order Now — Pesan Rendang Mamaji"
+          title="Klik untuk pesan Rendang Mamaji"
+        ></a>
+      </div>
+
+      <!-- Cala-style bottom-center semicircular scroll-down notch -->
+      <a href="#cerita" class="hero-notch" aria-label="Gulir ke bagian berikutnya">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 10l5 5 5-5" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- Section 2: Warm Cream Editorial Showcase (exact Cala 2-card composition + statement) -->
+    <section class="intro-showcase" id="cerita">
+      <div class="container">
+        <h1 class="editorial-heading reveal">
+          Masakan Minang.<br />
+          Kehangatan Rumah.
+        </h1>
+
+        <div class="rendang-carousel reveal" id="rendangCarousel" aria-roledescription="carousel" aria-label="Galeri Varian Rendang Mamaji">
+          <div class="carousel-stage">
+            <button type="button" class="carousel-nav-btn carousel-nav-btn--prev" id="carouselPrev" aria-label="Slide sebelumnya">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+
+            <div class="carousel-viewport" id="carouselViewport">
+              <div class="carousel-track" id="carouselTrack">
+                <article class="carousel-slide is-active" data-index="0" data-caption="01 / 04 — Rendang Daging Sapi Klasik">
+                  <div class="duo-card-art">
+                    <img
+                      src="Asset/WhatsApp%20Image%202026-11-25%20at%209.22.33%20AM.jpeg"
+                      alt="Rendang Daging Sapi Klasik Rendang Mamaji di atas daun pisang"
+                      class="duo-card-photo"
+                    />
+                    <div class="duo-card-graphic-blobs" aria-hidden="true">
+                      <svg viewBox="0 0 400 400" preserveAspectRatio="none">
+                        <path d="M0,0 L120,0 C110,48 72,70 48,108 C22,148 0,130 0,130 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M270,0 L400,0 L400,118 C355,112 332,78 302,54 C274,32 270,0 270,0 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M0,295 C46,288 78,318 96,356 C108,380 120,400 120,400 L0,400 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M400,265 L400,400 L268,400 C282,356 322,334 352,302 C374,278 400,265 400,265 Z" fill="#C93E1E" opacity="0.92" />
+                      </svg>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="carousel-slide" data-index="1" data-caption="02 / 04 — Rendang Komplit Nasi &amp; Sambal Ijo">
+                  <div class="duo-card-art">
+                    <img
+                      src="Asset/rendang-komplit.jpg"
+                      alt="Rendang Mamaji Komplit dengan nasi putih hangat dan sambal lado mudo"
+                      class="duo-card-photo"
+                    />
+                    <div class="duo-card-graphic-blobs" aria-hidden="true">
+                      <svg viewBox="0 0 400 400" preserveAspectRatio="none">
+                        <path d="M0,0 L120,0 C110,48 72,70 48,108 C22,148 0,130 0,130 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M270,0 L400,0 L400,118 C355,112 332,78 302,54 C274,32 270,0 270,0 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M0,295 C46,288 78,318 96,356 C108,380 120,400 120,400 L0,400 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M400,265 L400,400 L268,400 C282,356 322,334 352,302 C374,278 400,265 400,265 Z" fill="#C93E1E" opacity="0.92" />
+                      </svg>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="carousel-slide" data-index="2" data-caption="03 / 04 — Rendang Paru &amp; Daging Serundeng">
+                  <div class="duo-card-art">
+                    <img
+                      src="Asset/rendang-bumbu-pekat.jpg"
+                      alt="Rendang Paru dan Daging Sapi berbumbu pekat dengan taburan serundeng rempah"
+                      class="duo-card-photo"
+                    />
+                    <div class="duo-card-graphic-blobs" aria-hidden="true">
+                      <svg viewBox="0 0 400 400" preserveAspectRatio="none">
+                        <path d="M0,0 L120,0 C110,48 72,70 48,108 C22,148 0,130 0,130 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M270,0 L400,0 L400,118 C355,112 332,78 302,54 C274,32 270,0 270,0 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M0,295 C46,288 78,318 96,356 C108,380 120,400 120,400 L0,400 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M400,265 L400,400 L268,400 C282,356 322,334 352,302 C374,278 400,265 400,265 Z" fill="#C93E1E" opacity="0.92" />
+                      </svg>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="carousel-slide" data-index="3" data-caption="04 / 04 — Paket Vacuum &amp; Sambal Ijo">
+                  <div class="duo-card-art">
+                    <img
+                      src="Asset/rendang-hantaran.jpg"
+                      alt="Rendang Mamaji kemasan vacuum praktis bersama sambal ijo"
+                      class="duo-card-photo"
+                    />
+                    <div class="duo-card-graphic-blobs" aria-hidden="true">
+                      <svg viewBox="0 0 400 400" preserveAspectRatio="none">
+                        <path d="M0,0 L120,0 C110,48 72,70 48,108 C22,148 0,130 0,130 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M270,0 L400,0 L400,118 C355,112 332,78 302,54 C274,32 270,0 270,0 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M0,295 C46,288 78,318 96,356 C108,380 120,400 120,400 L0,400 Z" fill="#C93E1E" opacity="0.92" />
+                        <path d="M400,265 L400,400 L268,400 C282,356 322,334 352,302 C374,278 400,265 400,265 Z" fill="#C93E1E" opacity="0.92" />
+                      </svg>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button type="button" class="carousel-nav-btn carousel-nav-btn--next" id="carouselNext" aria-label="Slide berikutnya">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="carousel-controls-bar">
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Pilih slide rendang">
+              <button type="button" class="carousel-dot is-active" data-slide="0" aria-label="Slide 1" aria-selected="true"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2" aria-selected="false"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3" aria-selected="false"></button>
+              <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4" aria-selected="false"></button>
+            </div>
+            <p class="carousel-caption" id="carouselCaption">01 / 04 — Rendang Daging Sapi Klasik</p>
+          </div>
+        </div>
+
+        <!-- Centered Starburst + Uppercase Editorial Statement -->
+        <div class="editorial-manifesto reveal">
+          <svg class="manifesto-starburst" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+            <g transform="translate(32,32)">
+              <ellipse rx="3.9" ry="17" transform="rotate(0) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(30) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(60) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(90) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(120) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(150) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(180) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(210) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(240) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(270) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(300) translate(0,-11)" />
+              <ellipse rx="3.9" ry="17" transform="rotate(330) translate(0,-11)" />
+            </g>
+          </svg>
+
+          <p class="manifesto-text">
+            DIRACIK UNTUK MENGGUGAH SELERA,<br />
+            MEMBAWA SENYUM DI SETIAP SUAPAN
+            <span class="inline-bracket" aria-hidden="true">
+              [<svg viewBox="0 0 24 24" class="inline-icon inline-icon--chili"><path d="M12 3c4 4 6 7.5 6 11a6 6 0 1 1-12 0c0-2.1.8-4 2.1-5.6.3 1.7 1.3 2.8 2.5 3.1C10.3 8.4 10.8 5.5 12 3Z" fill="#C93E1E"/></svg>]
+            </span>, DAN<br />
+            MENGHANGATKAN MEJA MAKAN ANDA
+            <span class="inline-bracket" aria-hidden="true">
+              [<svg viewBox="0 0 24 24" class="inline-icon inline-icon--sun"><circle cx="12" cy="12" r="5.2" fill="#EBB72A"/><g stroke="#EBB72A" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="4.6"/><line x1="12" y1="19.4" x2="12" y2="22"/><line x1="2" y1="12" x2="4.6" y2="12"/><line x1="19.4" y1="12" x2="22" y2="12"/><line x1="4.9" y1="4.9" x2="6.8" y2="6.8"/><line x1="17.2" y1="17.2" x2="19.1" y2="19.1"/><line x1="19.1" y1="4.9" x2="17.2" y2="6.8"/><line x1="6.8" y1="17.2" x2="4.9" y2="19.1"/></g></svg>]
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: 50/50 Split Block (matching Cala's "Notre Application" split band) -->
+    <section class="split-feature" id="paket">
+      <div class="split-left">
+        <div class="split-content reveal">
+          <span class="split-eyebrow">SIAP SAJI &amp; KEMASAN VACUUM</span>
+          <h2 class="split-heading">
+            Pesan Mudah,<br />
+            Kirim ke Mana Saja.
+          </h2>
+          <p class="split-copy">
+            Nikmati kelezatan Rendang Mamaji hangat untuk santap siang hari ini, atau pilih kemasan vacuum food-grade yang tahan hingga 30 hari di kulkas—cocok untuk stok di rumah, bekal traveling, dan hantaran keluarga.
+          </p>
+          <div class="split-actions">
+            <a
+              href="https://wa.me/6281200000000?text=Halo%20Rendang%20Mamaji%2C%20saya%20ingin%20memesan%20Rendang%20Mamaji."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-sunny"
+            >Pesan via WhatsApp</a>
+            <a href="#lokasi" class="btn-outline-cream">Lokasi Dapur</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-right">
+        <div class="split-visual-stage reveal">
+          <div class="split-arch-frame">
+            <img
+              src="Asset/rendang-hantaran.jpg"
+              alt="Rendang Mamaji dalam piring keramik dan kemasan vacuum"
+              class="split-arch-img"
+            />
+          </div>
+          <div class="floating-badge floating-badge--top">
+            <span class="badge-dot"></span>
+            Dimasak Perlahan 8 Jam
+          </div>
+          <div class="floating-badge floating-badge--bottom">
+            100% Rempah Segar • Tanpa Pengawet
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Golden Marquee Strip -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span>RENDANG MAMAJI</span>
+        <span class="marquee-star">✺</span>
+        <span>BOLD AROMA</span>
+        <span class="marquee-star">✺</span>
+        <span>SPICY KICK</span>
+        <span class="marquee-star">✺</span>
+        <span>UNFORGETTABLE TASTE</span>
+        <span class="marquee-star">✺</span>
+        <span>TRY, DEFINITELY RETURN</span>
+        <span class="marquee-star">✺</span>
+        <span>RENDANG MAMAJI</span>
+        <span class="marquee-star">✺</span>
+        <span>BOLD AROMA</span>
+        <span class="marquee-star">✺</span>
+        <span>SPICY KICK</span>
+        <span class="marquee-star">✺</span>
+        <span>UNFORGETTABLE TASTE</span>
+        <span class="marquee-star">✺</span>
+        <span>TRY, DEFINITELY RETURN</span>
+        <span class="marquee-star">✺</span>
+      </div>
+    </div>
+
+    <!-- Section 5: Craft & Heritage (Keunggulan) -->
+    <section class="craft-section" id="galeri">
+      <div class="container">
+        <div class="craft-header reveal">
+          <span class="section-tag">KENAPA RENDANG MAMAJI</span>
+          <h2 class="section-title centered">
+            Sabar di Tungku,<br />
+            Kaya di Lidah.
+          </h2>
+        </div>
+
+        <div class="craft-grid">
+          <article class="craft-card reveal">
+            <div class="craft-num">01</div>
+            <h3>Daging Sapi Pilihan</h3>
+            <p>
+              Menggunakan potongan daging has &amp; sengkel segar berkualitas yang empuk berserat, tidak mudah hancur, dan menyerap dedak rendang hingga ke bagian dalam.
+            </p>
+          </article>
+
+          <article class="craft-card craft-card--accent reveal">
+            <div class="craft-num">02</div>
+            <h3>Aduk Perlahan 8 Jam</h3>
+            <p>
+              Santan murni dari kelapa tua peras langsung diaduk perlahan bersama lengkuas, serai, daun jeruk, dan cabai merah hingga menghasilkan karamelisasi bumbu yang pekat.
+            </p>
+          </article>
+
+          <article class="craft-card reveal">
+            <div class="craft-num">03</div>
+            <h3>Hangat &amp; Tanpa Pengawet</h3>
+            <p>
+              Secara alami awet berkat proses pemasakan tradisional yang matang sempurna. Bebas pengawet buatan dan MSG tambahan—aman untuk dinikmati seluruh keluarga.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Kemitraan, Pesan Antar & Lokasi -->
+    <section class="info-band" id="kemitraan">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card info-card--espresso reveal" id="pengiriman">
+            <span class="info-label">PESAN ANTAR &amp; HAMPERS</span>
+            <h3>Butuh untuk Acara Kantor, Arisan, atau Kiriman Luar Kota?</h3>
+            <p>
+              Tersedia layanan Same-Day Jabodetabek untuk porsi siap santap dan ekspedisi kilat ke seluruh Indonesia untuk kemasan vacuum pack eksklusif.
+            </p>
+            <a
+              href="https://wa.me/6281200000000?text=Halo%20Rendang%20Mamaji%2C%20saya%20ingin%20pesan%20antar%20atau%20hampers."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-sunny"
+            >Pesan Sekarang</a>
+          </div>
+
+          <div class="info-card info-card--sunlight reveal" id="lokasi">
+            <span class="info-label info-label--dark">DAPUR &amp; KEMITRAAN</span>
+            <h3>Kunjungi Dapur Mamaji atau Jadi Mitra Resmi Kami</h3>
+            <ul class="info-list">
+              <li><strong>Dapur Utama:</strong> Jl. Kemang Timur No. 42, Jakarta Selatan</li>
+              <li><strong>Jam Operasional:</strong> Setiap Hari, 09.00 – 20.30 WIB</li>
+              <li><strong>Kemitraan &amp; Reseller:</strong> Tersedia paket stok frozen &amp; vacuum untuk kafe dan toko oleh-oleh.</li>
+            </ul>
+            <a
+              href="https://wa.me/6281200000000?text=Halo%20Rendang%20Mamaji%2C%20saya%20tertarik%20info%20kemitraan%20dan%20reseller."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-dark"
+            >Info Kemitraan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Deep Espresso Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <div class="footer-logo">
+            <svg class="footer-starburst" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+              <g transform="translate(32,32)">
+                <ellipse rx="4.2" ry="18" transform="rotate(0) translate(0,-11)" />
+                <ellipse rx="4.2" ry="18" transform="rotate(32.7) translate(0,-11)" />
+                <ellipse rx="4.2" ry="18" transform="rotate(65.4) translate(0,-11)" />
+                <ellipse rx="4.2" ry="18" transform="rotate(98.1) translate(0,-11)" />
+                <ellipse rx="4.2" ry="18" transform="rotate(130.9) translate(0,-11)" />
+                <ellipse rx="4.2" ry="18" transform="rotate(163.6) translate(0,-11)" />
+                <ellipse rx="4.2" ry="18" transform="rotate(196.3) translate(0,-11)" />
+                <ellipse rx="4.2" ry="18" transform="rotate(229) translate(0,-11)" />
+                <ellipse rx="4.2" ry="18" transform="rotate(261.8) translate(0,-11)" />
+                <ellipse rx="4.2" ry="18" transform="rotate(294.5) translate(0,-11)" />
+                <ellipse rx="4.2" ry="18" transform="rotate(327.2) translate(0,-11)" />
+              </g>
+            </svg>
+            <span>Rendang Mamaji</span>
+          </div>
+          <p class="footer-tagline">
+            Bold aroma, spicy kick, unforgettable taste.<br />
+            Try it once and you will be back for more.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>NAVIGASI</h4>
+          <a href="#cerita">Cerita Kami</a>
+          <a href="#paket">Kemasan Vacuum</a>
+          <a href="#galeri">Keunggulan</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>LAYANAN</h4>
+          <a href="#pengiriman">Pesan Antar</a>
+          <a href="#kemitraan">Hampers &amp; Catering</a>
+          <a href="#lokasi">Lokasi Dapur</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Rendang Mamaji. Racikan Keluarga, Hangat Setiap Hari.</span>
+        <span>@rendangmamaji • Jakarta Selatan</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
