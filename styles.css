@@ -219,14 +219,14 @@ button {
 .hero-section {
   background-color: #894821;
   position: relative;
-  padding: 10px 16px 26px;
+  padding: 0;
 }
 
 .hero-media-frame {
   position: relative;
   width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 .hero-asset-img {
@@ -1071,11 +1071,11 @@ button {
   }
 
   .hero-section {
-    padding: 6px 8px 22px;
+    padding: 0;
   }
 
   .hero-media-frame {
-    max-width: 100%;
+    max-width: none;
   }
 
   .hero-asset-img {
