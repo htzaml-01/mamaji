@@ -1,7 +1,7 @@
 <!-- =========================================================
      ELEMENTOR CUSTOM HTML — SECTION 2: HERO BANNER (PURE HTML/CSS/SVG)
      Atur Container Elementor: Full Width, Padding 0.
-     Ganti URL gambar hero-bowl-bg.jpg dengan URL Media Library WordPress jika perlu.
+     Ganti URL gambar dengan URL Media Library WordPress jika perlu.
      ========================================================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,15 +52,15 @@
   }
 
   .rmm-hero-flower--tl {
-    width: clamp(110px, 12vw, 170px);
-    top: -12px;
+    width: clamp(105px, 11.5vw, 162px);
+    top: -16px;
     left: -26px;
   }
 
   .rmm-hero-flower--mid {
-    width: clamp(115px, 12.5vw, 175px);
-    top: clamp(140px, 14vw, 200px);
-    left: clamp(230px, 24vw, 355px);
+    width: clamp(110px, 12vw, 168px);
+    bottom: -36px;
+    right: -34px;
   }
 
   .rmm-hero-flower--dark {
@@ -78,15 +78,17 @@
 
   .rmm-hero-headline-wrap {
     position: relative;
+    width: fit-content;
+    max-width: 100%;
     z-index: 2;
-    padding-left: clamp(18px, 2.5vw, 38px);
-    padding-top: 16px;
+    margin-left: clamp(16px, 2.2vw, 34px);
+    padding-top: 18px;
   }
 
   .rmm-hero-pill {
     position: absolute;
     top: 6px;
-    right: clamp(-14px, 1vw, 18px);
+    right: -14px;
     transform: rotate(-8deg);
     background-color: #F9D849;
     color: #3A1912;
@@ -102,6 +104,8 @@
   }
 
   .rmm-hero-title {
+    position: relative;
+    z-index: 2;
     font-family: 'Rubik', 'DM Sans', sans-serif;
     font-weight: 900;
     font-size: clamp(46px, 6vw, 84px);
@@ -205,26 +209,44 @@
   @media (max-width: 768px) {
     .rmm-hero-section {
       background-image: none;
-      background-color: #894821;
+      background: radial-gradient(circle at 50% 45%, #9B5429 0%, #83421D 100%);
     }
 
     .rmm-hero-inner {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       min-height: auto;
-      padding: 26px 0 34px;
-      gap: 18px;
+      padding: 30px 0 42px;
+      gap: 20px;
+    }
+
+    .rmm-hero-left,
+    .rmm-hero-right {
+      display: contents;
+    }
+
+    .rmm-hero-headline-wrap {
+      order: 1;
+      margin: 6px auto 0;
+      padding: 16px 14px 4px;
+      text-align: center;
+    }
+
+    .rmm-hero-title {
+      font-size: clamp(40px, 12.2vw, 58px);
     }
 
     .rmm-hero-flower--tl {
-      width: 96px;
-      left: -18px;
+      width: 84px;
+      left: -14px;
       top: -10px;
     }
 
     .rmm-hero-flower--mid {
-      width: 98px;
-      left: 195px;
-      top: 98px;
+      width: 86px;
+      right: -14px;
+      bottom: -20px;
     }
 
     .rmm-hero-flower--dark,
@@ -232,31 +254,43 @@
       display: none;
     }
 
-    .rmm-hero-headline-wrap {
-      padding-left: 12px;
-      padding-top: 12px;
-      margin-bottom: 16px;
-    }
-
     .rmm-hero-pill {
       right: -6px;
-      top: 2px;
+      top: -4px;
       padding: 4px 12px;
-      font-size: 11.5px;
-    }
-
-    .rmm-hero-right {
-      align-items: flex-start;
-      gap: 14px;
+      font-size: 11px;
     }
 
     .rmm-hero-mobile-bowl {
+      order: 2;
       display: block;
-      width: 100%;
-      border-radius: 14px;
-      aspect-ratio: 16 / 10;
+      width: min(300px, 82%);
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      border: 4px solid #F9D849;
+      box-shadow: 0 18px 36px rgba(58, 25, 18, 0.34);
       object-fit: cover;
-      object-position: 76% 50%;
+    }
+
+    .rmm-hero-cta {
+      order: 3;
+      align-items: center;
+      text-align: center;
+      padding-left: 0;
+      margin-top: 2px;
+    }
+
+    .rmm-hero-order-btn {
+      padding: 12px 34px;
+      font-size: 15px;
+    }
+
+    .rmm-hero-tagline {
+      order: 4;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.45;
+      max-width: 300px;
     }
 
     .rmm-hero-notch {
@@ -269,37 +303,37 @@
 <section class="rmm-hero-section" aria-label="Banner Utama Rendang Mamaji">
   <div class="rmm-hero-inner">
     <div class="rmm-hero-left">
-      <svg class="rmm-hero-flower rmm-hero-flower--tl" viewBox="0 0 120 120" fill="#F9D849" aria-hidden="true">
-        <g transform="translate(60,60)">
-          <path d="M0,-54 C7,-54 9,-22 0,-6 C-9,-22 -7,-54 0,-54Z" transform="rotate(0)" />
-          <path d="M0,-52 C8,-52 9,-22 0,-6 C-8,-22 -8,-52 0,-52Z" transform="rotate(38)" />
-          <path d="M0,-55 C7,-55 9,-22 0,-6 C-9,-22 -7,-55 0,-55Z" transform="rotate(76)" />
-          <path d="M0,-50 C8,-50 9,-22 0,-6 C-8,-22 -8,-50 0,-50Z" transform="rotate(116)" />
-          <path d="M0,-54 C7,-54 9,-22 0,-6 C-9,-22 -7,-54 0,-54Z" transform="rotate(155)" />
-          <path d="M0,-52 C8,-52 9,-22 0,-6 C-8,-22 -8,-52 0,-52Z" transform="rotate(196)" />
-          <path d="M0,-54 C7,-54 9,-22 0,-6 C-9,-22 -7,-54 0,-54Z" transform="rotate(236)" />
-          <path d="M0,-50 C8,-50 9,-22 0,-6 C-8,-22 -8,-50 0,-50Z" transform="rotate(278)" />
-          <path d="M0,-53 C7,-53 9,-22 0,-6 C-9,-22 -7,-53 0,-53Z" transform="rotate(318)" />
-        </g>
-      </svg>
-
-      <svg class="rmm-hero-flower rmm-hero-flower--mid" viewBox="0 0 120 120" fill="#F9D849" aria-hidden="true">
-        <g transform="translate(60,60)">
-          <ellipse rx="7" ry="26" transform="rotate(0) translate(0,-24)" />
-          <ellipse rx="7.5" ry="25" transform="rotate(33) translate(0,-24)" />
-          <ellipse rx="7" ry="26" transform="rotate(66) translate(0,-24)" />
-          <ellipse rx="7.5" ry="24" transform="rotate(99) translate(0,-24)" />
-          <ellipse rx="7" ry="26" transform="rotate(132) translate(0,-24)" />
-          <ellipse rx="7" ry="25" transform="rotate(165) translate(0,-24)" />
-          <ellipse rx="7.5" ry="26" transform="rotate(198) translate(0,-24)" />
-          <ellipse rx="7" ry="24" transform="rotate(231) translate(0,-24)" />
-          <ellipse rx="7.5" ry="26" transform="rotate(264) translate(0,-24)" />
-          <ellipse rx="7" ry="25" transform="rotate(297) translate(0,-24)" />
-          <ellipse rx="7" ry="26" transform="rotate(330) translate(0,-24)" />
-        </g>
-      </svg>
-
       <div class="rmm-hero-headline-wrap">
+        <svg class="rmm-hero-flower rmm-hero-flower--tl" viewBox="0 0 120 120" fill="#F9D849" aria-hidden="true">
+          <g transform="translate(60,60)">
+            <path d="M0,-54 C7,-54 9,-22 0,-6 C-9,-22 -7,-54 0,-54Z" transform="rotate(0)" />
+            <path d="M0,-52 C8,-52 9,-22 0,-6 C-8,-22 -8,-52 0,-52Z" transform="rotate(38)" />
+            <path d="M0,-55 C7,-55 9,-22 0,-6 C-9,-22 -7,-55 0,-55Z" transform="rotate(76)" />
+            <path d="M0,-50 C8,-50 9,-22 0,-6 C-8,-22 -8,-50 0,-50Z" transform="rotate(116)" />
+            <path d="M0,-54 C7,-54 9,-22 0,-6 C-9,-22 -7,-54 0,-54Z" transform="rotate(155)" />
+            <path d="M0,-52 C8,-52 9,-22 0,-6 C-8,-22 -8,-52 0,-52Z" transform="rotate(196)" />
+            <path d="M0,-54 C7,-54 9,-22 0,-6 C-9,-22 -7,-54 0,-54Z" transform="rotate(236)" />
+            <path d="M0,-50 C8,-50 9,-22 0,-6 C-8,-22 -8,-50 0,-50Z" transform="rotate(278)" />
+            <path d="M0,-53 C7,-53 9,-22 0,-6 C-9,-22 -7,-53 0,-53Z" transform="rotate(318)" />
+          </g>
+        </svg>
+
+        <svg class="rmm-hero-flower rmm-hero-flower--mid" viewBox="0 0 120 120" fill="#F9D849" aria-hidden="true">
+          <g transform="translate(60,60)">
+            <ellipse rx="7" ry="26" transform="rotate(0) translate(0,-24)" />
+            <ellipse rx="7.5" ry="25" transform="rotate(33) translate(0,-24)" />
+            <ellipse rx="7" ry="26" transform="rotate(66) translate(0,-24)" />
+            <ellipse rx="7.5" ry="24" transform="rotate(99) translate(0,-24)" />
+            <ellipse rx="7" ry="26" transform="rotate(132) translate(0,-24)" />
+            <ellipse rx="7" ry="25" transform="rotate(165) translate(0,-24)" />
+            <ellipse rx="7.5" ry="26" transform="rotate(198) translate(0,-24)" />
+            <ellipse rx="7" ry="24" transform="rotate(231) translate(0,-24)" />
+            <ellipse rx="7.5" ry="26" transform="rotate(264) translate(0,-24)" />
+            <ellipse rx="7" ry="25" transform="rotate(297) translate(0,-24)" />
+            <ellipse rx="7" ry="26" transform="rotate(330) translate(0,-24)" />
+          </g>
+        </svg>
+
         <span class="rmm-hero-pill">RENDANG MAMAJI</span>
         <h2 class="rmm-hero-title">
           THE BEST<br />
@@ -347,7 +381,7 @@
       </svg>
 
       <img
-        src="https://raw.githubusercontent.com/htzaml-01/mamaji/main/Asset/hero-bowl-bg.jpg"
+        src="https://raw.githubusercontent.com/htzaml-01/mamaji/main/Asset/WhatsApp%20Image%202026-11-25%20at%209.22.33%20AM.jpeg"
         alt="Semangkuk Rendang Mamaji hangat di atas daun pisang"
         class="rmm-hero-mobile-bowl"
       />

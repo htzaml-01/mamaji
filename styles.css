@@ -251,15 +251,15 @@ button {
 }
 
 .hero-flower--tl {
-  width: clamp(110px, 12vw, 170px);
-  top: -12px;
+  width: clamp(105px, 11.5vw, 162px);
+  top: -16px;
   left: -26px;
 }
 
 .hero-flower--mid {
-  width: clamp(115px, 12.5vw, 175px);
-  top: clamp(140px, 14vw, 200px);
-  left: clamp(230px, 24vw, 355px);
+  width: clamp(110px, 12vw, 168px);
+  bottom: -36px;
+  right: -34px;
 }
 
 .hero-flower--dark {
@@ -277,15 +277,17 @@ button {
 
 .hero-headline-wrap {
   position: relative;
+  width: fit-content;
+  max-width: 100%;
   z-index: 2;
-  padding-left: clamp(18px, 2.5vw, 38px);
-  padding-top: 16px;
+  margin-left: clamp(16px, 2.2vw, 34px);
+  padding-top: 18px;
 }
 
 .hero-pill-badge {
   position: absolute;
   top: 6px;
-  right: clamp(-14px, 1vw, 18px);
+  right: -14px;
   transform: rotate(-8deg);
   background-color: #F9D849;
   color: #3A1912;
@@ -302,6 +304,8 @@ button {
 }
 
 .hero-display-title {
+  position: relative;
+  z-index: 2;
   font-family: var(--font-serif);
   font-weight: 900;
   font-size: clamp(2.85rem, 6vw, 5.2rem);
@@ -1158,8 +1162,12 @@ button {
 
   .editorial-intro-split {
     grid-template-columns: 1fr;
-    gap: 18px;
-    margin-bottom: 36px;
+    gap: 16px;
+    margin-bottom: 34px;
+  }
+
+  .editorial-heading {
+    font-size: clamp(2.45rem, 11vw, 3.4rem);
   }
 
   .editorial-lead {
@@ -1196,26 +1204,44 @@ button {
 
   .hero-section {
     background-image: none;
-    background-color: #894821;
+    background: radial-gradient(circle at 50% 45%, #9B5429 0%, #83421D 100%);
   }
 
   .hero-inner {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: auto;
-    padding: 26px 0 34px;
-    gap: 18px;
+    padding: 30px 0 42px;
+    gap: 20px;
+  }
+
+  .hero-left-col,
+  .hero-right-col {
+    display: contents;
+  }
+
+  .hero-headline-wrap {
+    order: 1;
+    margin: 6px auto 0;
+    padding: 16px 14px 4px;
+    text-align: center;
+  }
+
+  .hero-display-title {
+    font-size: clamp(2.55rem, 12.2vw, 3.6rem);
   }
 
   .hero-flower--tl {
-    width: 96px;
-    left: -18px;
+    width: 84px;
+    left: -14px;
     top: -10px;
   }
 
   .hero-flower--mid {
-    width: 98px;
-    left: 195px;
-    top: 98px;
+    width: 86px;
+    right: -14px;
+    bottom: -20px;
   }
 
   .hero-flower--dark,
@@ -1223,31 +1249,43 @@ button {
     display: none;
   }
 
-  .hero-headline-wrap {
-    padding-left: 12px;
-    padding-top: 12px;
-    margin-bottom: 16px;
-  }
-
   .hero-pill-badge {
     right: -6px;
-    top: 2px;
+    top: -4px;
     padding: 4px 12px;
-    font-size: 0.72rem;
-  }
-
-  .hero-right-col {
-    align-items: flex-start;
-    gap: 14px;
+    font-size: 0.7rem;
   }
 
   .hero-mobile-bowl {
+    order: 2;
     display: block;
-    width: 100%;
-    border-radius: 14px;
-    aspect-ratio: 16 / 10;
+    width: min(300px, 82%);
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+    border: 4px solid #F9D849;
+    box-shadow: 0 18px 36px rgba(58, 25, 18, 0.34);
     object-fit: cover;
-    object-position: 76% 50%;
+  }
+
+  .hero-cta-block {
+    order: 3;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 2px;
+  }
+
+  .hero-order-btn {
+    padding: 12px 34px;
+    font-size: 0.95rem;
+  }
+
+  .hero-tagline-right {
+    order: 4;
+    text-align: center;
+    font-size: 0.76rem;
+    line-height: 1.45;
+    max-width: 300px;
   }
 
   .hero-notch {
