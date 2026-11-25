@@ -1,0 +1,170 @@
+<!-- =========================================================
+     ELEMENTOR CUSTOM HTML — SECTION 6: KEMITRAAN & LOKASI
+     Atur Container Elementor: Full Width, Padding 0.
+     ========================================================= -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  .rmm-info-band * {
+    box-sizing: border-box;
+  }
+
+  .rmm-info-band {
+    background-color: #FDF3E3;
+    padding: 80px 0;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  .rmm-info-band a {
+    text-decoration: none;
+  }
+
+  .rmm-info-container {
+    width: min(1140px, 92%);
+    margin: 0 auto;
+  }
+
+  .rmm-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .rmm-info-card {
+    border-radius: 24px;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  .rmm-info-card--espresso {
+    background-color: #8A4820;
+    color: #FDF3E3;
+  }
+
+  .rmm-info-card--sunlight {
+    background-color: #F8D64A;
+    color: #3A1912;
+  }
+
+  .rmm-info-label {
+    font-family: 'Space Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #F8D64A;
+  }
+
+  .rmm-info-label--dark {
+    color: #BA4522;
+  }
+
+  .rmm-info-card h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(24px, 2.5vw, 32px);
+    line-height: 1.15;
+    font-weight: 700;
+    color: inherit;
+    margin: 0;
+  }
+
+  .rmm-info-card p {
+    margin: 0;
+    font-size: 15.5px;
+    line-height: 1.6;
+    opacity: 0.92;
+  }
+
+  .rmm-info-list {
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .rmm-btn-sunny-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8D64A;
+    color: #3A1912;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-size: 14.5px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .rmm-btn-sunny-info:hover {
+    background-color: #FFE164;
+    transform: translateY(-2px);
+  }
+
+  .rmm-btn-dark-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3A1912;
+    color: #F8D64A;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-size: 14.5px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .rmm-btn-dark-info:hover {
+    background-color: #270F0A;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 980px) {
+    .rmm-info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<section class="rmm-info-band" id="kemitraan">
+  <div class="rmm-info-container">
+    <div class="rmm-info-grid">
+      <div class="rmm-info-card rmm-info-card--espresso" id="pengiriman">
+        <span class="rmm-info-label">PESAN ANTAR &amp; HAMPERS</span>
+        <h3>Butuh untuk Acara Kantor, Arisan, atau Kiriman Luar Kota?</h3>
+        <p>
+          Tersedia layanan Same-Day Jabodetabek untuk porsi siap santap dan ekspedisi kilat ke seluruh Indonesia untuk kemasan vacuum pack eksklusif.
+        </p>
+        <a
+          href="https://wa.me/6281200000000?text=Halo%20Rendang%20Mamaji%2C%20saya%20ingin%20pesan%20antar%20atau%20hampers."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rmm-btn-sunny-info"
+        >Pesan Sekarang</a>
+      </div>
+
+      <div class="rmm-info-card rmm-info-card--sunlight" id="lokasi">
+        <span class="rmm-info-label rmm-info-label--dark">DAPUR &amp; KEMITRAAN</span>
+        <h3>Kunjungi Dapur Mamaji atau Jadi Mitra Resmi Kami</h3>
+        <ul class="rmm-info-list">
+          <li><strong>Dapur Utama:</strong> Jl. Kemang Timur No. 42, Jakarta Selatan</li>
+          <li><strong>Jam Operasional:</strong> Setiap Hari, 09.00 – 20.30 WIB</li>
+          <li><strong>Kemitraan &amp; Reseller:</strong> Tersedia paket stok frozen &amp; vacuum untuk kafe dan toko oleh-oleh.</li>
+        </ul>
+        <a
+          href="https://wa.me/6281200000000?text=Halo%20Rendang%20Mamaji%2C%20saya%20tertarik%20info%20kemitraan%20dan%20reseller."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rmm-btn-dark-info"
+        >Info Kemitraan</a>
+      </div>
+    </div>
+  </div>
+</section>

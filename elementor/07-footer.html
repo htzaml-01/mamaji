@@ -1,0 +1,158 @@
+<!-- =========================================================
+     ELEMENTOR CUSTOM HTML — SECTION 7: FOOTER
+     Atur Container Elementor: Full Width, Padding 0
+     (atau tempel di Elementor Theme Builder -> Footer).
+     ========================================================= -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  .rmm-footer * {
+    box-sizing: border-box;
+  }
+
+  .rmm-footer {
+    background-color: #3A1912;
+    color: #FDF3E3;
+    padding: 64px 0 32px;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  .rmm-footer a {
+    text-decoration: none;
+  }
+
+  .rmm-footer-container {
+    width: min(1140px, 92%);
+    margin: 0 auto;
+  }
+
+  .rmm-footer-top {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid rgba(253, 243, 227, 0.14);
+  }
+
+  .rmm-footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #F8D64A;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  .rmm-footer-starburst {
+    width: 32px;
+    height: 32px;
+  }
+
+  .rmm-footer-tagline {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(253, 243, 227, 0.78);
+  }
+
+  .rmm-footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rmm-footer-col h4 {
+    font-family: 'Space Mono', ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: #F8D64A;
+    margin: 0 0 4px;
+  }
+
+  .rmm-footer-col a {
+    color: rgba(253, 243, 227, 0.84);
+    font-size: 14.5px;
+    transition: color 0.2s ease;
+  }
+
+  .rmm-footer-col a:hover {
+    color: #F8D64A;
+  }
+
+  .rmm-footer-bottom {
+    padding-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: 'Space Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: rgba(253, 243, 227, 0.62);
+  }
+
+  @media (max-width: 980px) {
+    .rmm-footer-top {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .rmm-footer-top {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<footer class="rmm-footer">
+  <div class="rmm-footer-container">
+    <div class="rmm-footer-top">
+      <div>
+        <div class="rmm-footer-logo">
+          <svg class="rmm-footer-starburst" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+            <g transform="translate(32,32)">
+              <ellipse rx="4.2" ry="18" transform="rotate(0) translate(0,-11)" />
+              <ellipse rx="4.2" ry="18" transform="rotate(32.7) translate(0,-11)" />
+              <ellipse rx="4.2" ry="18" transform="rotate(65.4) translate(0,-11)" />
+              <ellipse rx="4.2" ry="18" transform="rotate(98.1) translate(0,-11)" />
+              <ellipse rx="4.2" ry="18" transform="rotate(130.9) translate(0,-11)" />
+              <ellipse rx="4.2" ry="18" transform="rotate(163.6) translate(0,-11)" />
+              <ellipse rx="4.2" ry="18" transform="rotate(196.3) translate(0,-11)" />
+              <ellipse rx="4.2" ry="18" transform="rotate(229) translate(0,-11)" />
+              <ellipse rx="4.2" ry="18" transform="rotate(261.8) translate(0,-11)" />
+              <ellipse rx="4.2" ry="18" transform="rotate(294.5) translate(0,-11)" />
+              <ellipse rx="4.2" ry="18" transform="rotate(327.2) translate(0,-11)" />
+            </g>
+          </svg>
+          <span>Rendang Mamaji</span>
+        </div>
+        <p class="rmm-footer-tagline">
+          Bold aroma, spicy kick, unforgettable taste.<br />
+          Try it once and you will be back for more.
+        </p>
+      </div>
+
+      <div class="rmm-footer-col">
+        <h4>NAVIGASI</h4>
+        <a href="#cerita">Cerita Kami</a>
+        <a href="#paket">Kemasan Vacuum</a>
+        <a href="#galeri">Keunggulan</a>
+      </div>
+
+      <div class="rmm-footer-col">
+        <h4>LAYANAN</h4>
+        <a href="#pengiriman">Pesan Antar</a>
+        <a href="#kemitraan">Hampers &amp; Catering</a>
+        <a href="#lokasi">Lokasi Dapur</a>
+      </div>
+    </div>
+
+    <div class="rmm-footer-bottom">
+      <span>© 2026 Rendang Mamaji. Racikan Keluarga, Hangat Setiap Hari.</span>
+      <span>Jakarta Selatan • Dapur Mamaji</span>
+    </div>
+  </div>
+</footer>
