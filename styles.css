@@ -214,45 +214,169 @@ button {
 }
 
 /* ============================================================
-   Hero Section (Compact Framed Hero Asset + Scroll Notch)
+   Hero Section (Pure HTML/CSS/SVG Layout over Clean Bowl Backdrop)
    ============================================================ */
 .hero-section {
-  background-color: #894821;
+  background: #894821 url("Asset/hero-bowl-bg.jpg") no-repeat 74% 48% / cover;
   position: relative;
-  padding: 0;
+  overflow: hidden;
+  width: 100%;
 }
 
-.hero-media-frame {
+.hero-inner {
+  width: min(1320px, 92%);
+  margin: 0 auto;
+  min-height: clamp(500px, 43vw, 620px);
+  padding: 36px 0 38px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: stretch;
   position: relative;
-  width: 100%;
-  max-width: none;
-  margin: 0;
+  z-index: 2;
 }
 
-.hero-asset-img {
-  width: 100%;
-  height: auto;
-  display: block;
+.hero-left-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 10px;
 }
 
-/* Transparent interactive button aligned cleanly over the baked-in "ORDER NOW" pill */
-.hero-order-hotspot {
+.hero-flower {
   position: absolute;
-  left: 5%;
-  bottom: 10%;
-  width: 13.2%;
-  height: 7.5%;
-  border-radius: var(--radius-pill);
-  border: none;
-  background: transparent;
-  padding: 0;
-  z-index: 4;
-  transition: box-shadow 0.25s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.hero-order-hotspot:hover {
-  box-shadow: 0 0 0 3px rgba(248, 214, 74, 0.55), 0 10px 24px rgba(58, 25, 18, 0.35);
+.hero-flower--tl {
+  width: clamp(110px, 12vw, 170px);
+  top: -12px;
+  left: -26px;
+}
+
+.hero-flower--mid {
+  width: clamp(115px, 12.5vw, 175px);
+  top: clamp(140px, 14vw, 200px);
+  left: clamp(230px, 24vw, 355px);
+}
+
+.hero-flower--dark {
+  position: relative;
+  width: clamp(92px, 9.5vw, 134px);
+  margin: 12px 0 10px 8px;
+}
+
+.hero-flower--tr {
+  width: clamp(110px, 11.5vw, 162px);
+  top: 28px;
+  right: -12px;
+  z-index: 0;
+}
+
+.hero-headline-wrap {
+  position: relative;
+  z-index: 2;
+  padding-left: clamp(18px, 2.5vw, 38px);
+  padding-top: 16px;
+}
+
+.hero-pill-badge {
+  position: absolute;
+  top: 6px;
+  right: clamp(-14px, 1vw, 18px);
+  transform: rotate(-8deg);
+  background-color: #F9D849;
+  color: #3A1912;
+  border: 1.5px solid #3A1912;
+  border-radius: var(--radius-pill);
+  padding: 6px 18px;
+  font-family: var(--font-sans);
+  font-size: clamp(0.72rem, 1.05vw, 0.95rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(58, 25, 18, 0.16);
+  z-index: 3;
+}
+
+.hero-display-title {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: clamp(2.85rem, 6vw, 5.2rem);
+  line-height: 0.85;
+  letter-spacing: -0.045em;
+  color: #3A1912;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.hero-cta-block {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding-left: clamp(6px, 1vw, 14px);
+}
+
+.hero-order-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F9D849;
+  color: #3A1912;
+  border-radius: var(--radius-pill);
+  padding: 10px 28px;
+  font-family: var(--font-sans);
+  font-size: clamp(0.88rem, 1.15vw, 1.05rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(58, 25, 18, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-order-btn:hover {
+  background-color: #FFE469;
   transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(58, 25, 18, 0.28);
+}
+
+.hero-brand-sub {
+  font-family: var(--font-sans);
+  font-size: clamp(0.9rem, 1.15vw, 1.05rem);
+  font-weight: 800;
+  color: #3A1912;
+  padding-left: 2px;
+}
+
+.hero-right-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.hero-mobile-bowl {
+  display: none;
+}
+
+.hero-tagline-right {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: clamp(0.72rem, 0.96vw, 0.88rem);
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: 0.02em;
+  color: #3A1912;
+  text-transform: uppercase;
 }
 
 /* Cala-style semicircular cream scroll-down notch */
@@ -1071,16 +1195,59 @@ button {
   }
 
   .hero-section {
-    padding: 0;
+    background-image: none;
+    background-color: #894821;
   }
 
-  .hero-media-frame {
-    max-width: none;
+  .hero-inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 26px 0 34px;
+    gap: 18px;
   }
 
-  .hero-asset-img {
+  .hero-flower--tl {
+    width: 96px;
+    left: -18px;
+    top: -10px;
+  }
+
+  .hero-flower--mid {
+    width: 98px;
+    left: 195px;
+    top: 98px;
+  }
+
+  .hero-flower--dark,
+  .hero-flower--tr {
+    display: none;
+  }
+
+  .hero-headline-wrap {
+    padding-left: 12px;
+    padding-top: 12px;
+    margin-bottom: 16px;
+  }
+
+  .hero-pill-badge {
+    right: -6px;
+    top: 2px;
+    padding: 4px 12px;
+    font-size: 0.72rem;
+  }
+
+  .hero-right-col {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .hero-mobile-bowl {
+    display: block;
     width: 100%;
-    height: auto;
+    border-radius: 14px;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: 76% 50%;
   }
 
   .hero-notch {

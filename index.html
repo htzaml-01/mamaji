@@ -73,22 +73,104 @@
   </header>
 
   <main>
-    <!-- Hero Section using the user's exact widescreen hero asset -->
+    <!-- Hero Section: Pure HTML/CSS/SVG Typography & Graphics over clean bowl backdrop -->
     <section class="hero-section" aria-label="Banner Utama Rendang Mamaji">
-      <div class="hero-media-frame">
-        <img
-          src="Asset/hero-the-best-instan-rendang.jpg"
-          alt="Rendang Mamaji — The Best Instan Rendang. Bold Aroma, Spicy Kick, Unforgettable Taste."
-          class="hero-asset-img"
-        />
+      <div class="hero-inner">
+        <div class="hero-left-col">
+          <!-- Top-left yellow sunburst behind headline -->
+          <svg class="hero-flower hero-flower--tl" viewBox="0 0 120 120" fill="#F9D849" aria-hidden="true">
+            <g transform="translate(60,60)">
+              <path d="M0,-54 C7,-54 9,-22 0,-6 C-9,-22 -7,-54 0,-54Z" transform="rotate(0)" />
+              <path d="M0,-52 C8,-52 9,-22 0,-6 C-8,-22 -8,-52 0,-52Z" transform="rotate(38)" />
+              <path d="M0,-55 C7,-55 9,-22 0,-6 C-9,-22 -7,-55 0,-55Z" transform="rotate(76)" />
+              <path d="M0,-50 C8,-50 9,-22 0,-6 C-8,-22 -8,-50 0,-50Z" transform="rotate(116)" />
+              <path d="M0,-54 C7,-54 9,-22 0,-6 C-9,-22 -7,-54 0,-54Z" transform="rotate(155)" />
+              <path d="M0,-52 C8,-52 9,-22 0,-6 C-8,-22 -8,-52 0,-52Z" transform="rotate(196)" />
+              <path d="M0,-54 C7,-54 9,-22 0,-6 C-9,-22 -7,-54 0,-54Z" transform="rotate(236)" />
+              <path d="M0,-50 C8,-50 9,-22 0,-6 C-8,-22 -8,-50 0,-50Z" transform="rotate(278)" />
+              <path d="M0,-53 C7,-53 9,-22 0,-6 C-9,-22 -7,-53 0,-53Z" transform="rotate(318)" />
+            </g>
+          </svg>
 
-        <!-- Interactive transparent hotspot over the baked-in ORDER NOW button -->
-        <a
-          href="#pengiriman"
-          class="hero-order-hotspot"
-          aria-label="Order Now — Pesan Rendang Mamaji"
-          title="Klik untuk pesan Rendang Mamaji"
-        ></a>
+          <!-- Bottom-right yellow flower behind RENDANG. -->
+          <svg class="hero-flower hero-flower--mid" viewBox="0 0 120 120" fill="#F9D849" aria-hidden="true">
+            <g transform="translate(60,60)">
+              <ellipse rx="7" ry="26" transform="rotate(0) translate(0,-24)" />
+              <ellipse rx="7.5" ry="25" transform="rotate(33) translate(0,-24)" />
+              <ellipse rx="7" ry="26" transform="rotate(66) translate(0,-24)" />
+              <ellipse rx="7.5" ry="24" transform="rotate(99) translate(0,-24)" />
+              <ellipse rx="7" ry="26" transform="rotate(132) translate(0,-24)" />
+              <ellipse rx="7" ry="25" transform="rotate(165) translate(0,-24)" />
+              <ellipse rx="7.5" ry="26" transform="rotate(198) translate(0,-24)" />
+              <ellipse rx="7" ry="24" transform="rotate(231) translate(0,-24)" />
+              <ellipse rx="7.5" ry="26" transform="rotate(264) translate(0,-24)" />
+              <ellipse rx="7" ry="25" transform="rotate(297) translate(0,-24)" />
+              <ellipse rx="7" ry="26" transform="rotate(330) translate(0,-24)" />
+            </g>
+          </svg>
+
+          <div class="hero-headline-wrap">
+            <span class="hero-pill-badge">RENDANG MAMAJI</span>
+            <h2 class="hero-display-title">
+              THE BEST<br />
+              INSTAN<br />
+              RENDANG.
+            </h2>
+          </div>
+
+          <!-- Dark espresso flower below headline -->
+          <svg class="hero-flower hero-flower--dark" viewBox="0 0 120 120" fill="#3A1912" aria-hidden="true">
+            <g transform="translate(60,60)">
+              <ellipse rx="6.5" ry="24" transform="rotate(0) translate(0,-22)" />
+              <ellipse rx="6.5" ry="24" transform="rotate(32.7) translate(0,-22)" />
+              <ellipse rx="6.5" ry="24" transform="rotate(65.4) translate(0,-22)" />
+              <ellipse rx="6.5" ry="24" transform="rotate(98.1) translate(0,-22)" />
+              <ellipse rx="6.5" ry="24" transform="rotate(130.9) translate(0,-22)" />
+              <ellipse rx="6.5" ry="24" transform="rotate(163.6) translate(0,-22)" />
+              <ellipse rx="6.5" ry="24" transform="rotate(196.3) translate(0,-22)" />
+              <ellipse rx="6.5" ry="24" transform="rotate(229) translate(0,-22)" />
+              <ellipse rx="6.5" ry="24" transform="rotate(261.8) translate(0,-22)" />
+              <ellipse rx="6.5" ry="24" transform="rotate(294.5) translate(0,-22)" />
+              <ellipse rx="6.5" ry="24" transform="rotate(327.2) translate(0,-22)" />
+            </g>
+          </svg>
+
+          <div class="hero-cta-block">
+            <a href="#pengiriman" class="hero-order-btn">ORDER NOW</a>
+            <span class="hero-brand-sub">Rendang Mamaji</span>
+          </div>
+        </div>
+
+        <div class="hero-right-col">
+          <!-- Yellow flower peeking behind top-right of bowl -->
+          <svg class="hero-flower hero-flower--tr" viewBox="0 0 120 120" fill="#F9D849" aria-hidden="true">
+            <g transform="translate(60,60)">
+              <ellipse rx="7" ry="26" transform="rotate(10) translate(0,-24)" />
+              <ellipse rx="7" ry="25" transform="rotate(44) translate(0,-24)" />
+              <ellipse rx="7" ry="26" transform="rotate(78) translate(0,-24)" />
+              <ellipse rx="7" ry="25" transform="rotate(112) translate(0,-24)" />
+              <ellipse rx="7" ry="26" transform="rotate(146) translate(0,-24)" />
+              <ellipse rx="7" ry="24" transform="rotate(180) translate(0,-24)" />
+              <ellipse rx="7" ry="26" transform="rotate(214) translate(0,-24)" />
+              <ellipse rx="7" ry="25" transform="rotate(248) translate(0,-24)" />
+              <ellipse rx="7" ry="26" transform="rotate(282) translate(0,-24)" />
+              <ellipse rx="7" ry="25" transform="rotate(316) translate(0,-24)" />
+            </g>
+          </svg>
+
+          <img
+            src="Asset/hero-bowl-bg.jpg"
+            alt="Semangkuk Rendang Mamaji hangat di atas daun pisang"
+            class="hero-mobile-bowl"
+          />
+
+          <p class="hero-tagline-right">
+            BOLD AROMA, SPICY KICK,<br />
+            UNFORGETTABLE TASTE.<br />
+            TRY IT ONCE AND YOU WILL<br />
+            BE BACK FOR MORE.
+          </p>
+        </div>
       </div>
 
       <!-- Cala-style bottom-center semicircular scroll-down notch -->
