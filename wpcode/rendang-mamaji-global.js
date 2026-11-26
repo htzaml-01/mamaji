@@ -6,8 +6,49 @@
    ===================================================================== */
 
 (function () {
-  function initRendangMamaji() {
-    // 1. Sticky Header Scroll Shadow & Mobile Menu Toggle
+  // ===================================================================
+  // KONFIGURASI GAMBAR WORDPRESS MEDIA LIBRARY (Cukup edit di sini!)
+  // Upload 5 gambar dari folder wordpress-media/ ke WP Media Library,
+  // lalu tempel File URL-nya masing-masing di bawah ini.
+  // Jika dibiarkan '', otomatis memakai URL bawaan HTML.
+  // ===================================================================
+  const RMM_MEDIA = {
+    hero: '',       // rendang-mamaji-hero.jpg
+    klasik: '',     // rendang-mamaji-klasik.jpg
+    komplit: '',    // rendang-mamaji-komplit.jpg
+    bumbuPekat: '', // rendang-mamaji-bumbu-pekat.jpg
+    hantaran: ''    // rendang-mamaji-hantaran.jpg
+  };
+
+  function applyWordPressMediaUrls() {
+    const fallbackFileMap = {
+      hero: 'hero-the-best-instan-rendang.jpg',
+      klasik: '9.22.33',
+      komplit: 'rendang-komplit.jpg',
+      bumbuPekat: 'rendang-bumbu-pekat.jpg',
+      hantaran: 'rendang-hantaran.jpg'
+    };
+
+    Object.keys(RMM_MEDIA).forEach(function (key) {
+      const customUrl = (RMM_MEDIA[key] || '').trim();
+      if (!customUrl) return;
+
+      // 1. Cocokkan lewat atribut data-rmm-img
+      document.querySelectorAll('img[data-rmm-img="' + key + '"]').forEach(function (img) {
+        img.src = customUrl;
+      });
+
+      // 2. Fallback: cocokkan lewat nama file lama di src jika HTML sudah terlanjur di-paste
+      const needle = fallbackFileMap[key];
+      if (needle) {
+        document.querySelectorAll('img[src*="' + needle + '"]').forEach(function (img) {
+          img.src = customUrl;
+        });
+      }
+    });
+  }
+
+  function initHeader() {
     const header = document.getElementById('rmmTop');
     const toggle = document.getElementById('rmmMobileToggle');
     const nav = document.getElementById('rmmMobileNav');
@@ -37,8 +78,9 @@
         { passive: true }
       );
     }
+  }
 
-    // 2. Infinite Auto-Carousel
+  function initCarousel() {
     const root = document.getElementById('rmmCarousel');
     const viewport = document.getElementById('rmmViewport');
     const track = document.getElementById('rmmTrack');
@@ -218,13 +260,32 @@
       applyPos(false);
     });
 
-    applyPos(false);
+    requestAnimationFrame(function () {
+      applyPos(false);
+    });
     startAuto();
+  }
+
+  function initRendangMamaji() {
+    applyWordPressMediaUrls();
+    initHeader();
+    initCarousel();
   }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initRendangMamaji);
   } else {
     initRendangMamaji();
+  }
+
+  // Dukungan tambahan untuk Elementor live preview / widget render dinamis
+  if (window.jQuery) {
+    window.jQuery(window).on('elementor/frontend/init', function () {
+      if (window.elementorFrontend && window.elementorFrontend.hooks) {
+        window.elementorFrontend.hooks.addAction('frontend/element_ready/html.default', function () {
+          initRendangMamaji();
+        });
+      }
+    });
   }
 })();

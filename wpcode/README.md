@@ -22,7 +22,7 @@ Folder ini memisahkan **Custom CSS** dan **Custom JS** untuk dimasukkan ke plugi
    - **Location**: `Site Wide Footer`
 6. Aktifkan toggle **Active** lalu klik **Save Snippet**.
 
-> JS ini sudah aman dipakai di **semua halaman** (header/footer di Theme Builder maupun landing page mana pun) karena mengecek keberadaan elemen terlebih dahulu sebelum menjalankan script.
+> JS ini sudah aman dipakai di **semua halaman** (header/footer di Theme Builder maupun landing page mana pun) dan sudah mendukung Elementor preview serta pengaturan URL gambar WordPress Media Library lewat blok `RMM_MEDIA` di bagian paling atas `rendang-mamaji-global.js` (cukup isi File URL WordPress di JS tanpa perlu mengedit HTML widget satu per satu).
 
 ## Langkah 3 — Tempel HTML Section ke Elementor
 Di dalam folder `sections/`, terdapat 7 file HTML murni (sudah bebas `<style>`, `<link>`, dan `<script>`):
