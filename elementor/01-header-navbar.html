@@ -46,7 +46,7 @@
   .rmm-nav-group {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: clamp(14px, 1.8vw, 26px);
   }
 
   .rmm-nav-left {
@@ -92,8 +92,9 @@
   }
 
   .rmm-brand-starburst {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
@@ -103,10 +104,11 @@
 
   .rmm-brand-wordmark {
     font-family: 'Rubik', 'DM Sans', sans-serif;
-    font-size: 23px;
+    font-size: clamp(16px, 4vw, 22px);
     font-weight: 900;
     letter-spacing: -0.04em;
     line-height: 1;
+    white-space: nowrap;
   }
 
   .rmm-mobile-controls {
@@ -203,7 +205,7 @@
           <ellipse rx="4.2" ry="18" transform="rotate(327.2) translate(0,-11)" />
         </g>
       </svg>
-      <span class="rmm-brand-wordmark">Mamaji</span>
+      <span class="rmm-brand-wordmark">Mamaji Local Culinary</span>
     </a>
 
     <div class="rmm-nav-group rmm-nav-right">

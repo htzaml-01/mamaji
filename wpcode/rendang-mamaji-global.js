@@ -260,9 +260,19 @@
       applyPos(false);
     });
 
+    if (typeof ResizeObserver !== 'undefined') {
+      const ro = new ResizeObserver(function () {
+        applyPos(false);
+      });
+      ro.observe(viewport);
+    }
+
     requestAnimationFrame(function () {
       applyPos(false);
     });
+    setTimeout(function () {
+      applyPos(false);
+    }, 180);
     startAuto();
   }
 

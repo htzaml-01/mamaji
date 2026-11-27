@@ -97,7 +97,7 @@ button {
 .nav-group {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: clamp(14px, 1.8vw, 28px);
 }
 
 .nav-left {
@@ -146,6 +146,7 @@ button {
 .brand-starburst {
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -155,10 +156,11 @@ button {
 
 .brand-wordmark {
   font-family: var(--font-serif);
-  font-size: 1.52rem;
-  font-weight: 800;
+  font-size: clamp(1.02rem, 4vw, 1.38rem);
+  font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .mobile-controls {
@@ -418,6 +420,8 @@ button {
   z-index: 6;
   width: 44px;
   height: 44px;
+  padding: 0;
+  line-height: 1;
   border-radius: 50%;
   border: 1.5px solid var(--espresso);
   background-color: var(--sunny);
@@ -438,6 +442,8 @@ button {
 .carousel-nav-btn svg {
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
+  display: block;
 }
 
 .carousel-nav-btn--prev {

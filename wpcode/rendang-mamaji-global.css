@@ -66,7 +66,7 @@ html {
 .rmm-nav-group {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: clamp(14px, 1.8vw, 26px);
 }
 
 .rmm-nav-left {
@@ -112,8 +112,9 @@ html {
 }
 
 .rmm-brand-starburst {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -123,10 +124,11 @@ html {
 
 .rmm-brand-wordmark {
   font-family: 'Rubik', 'DM Sans', sans-serif;
-  font-size: 23px;
+  font-size: clamp(16px, 4vw, 22px);
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .rmm-mobile-controls {
@@ -389,6 +391,8 @@ html {
   z-index: 6;
   width: 44px;
   height: 44px;
+  padding: 0 !important;
+  line-height: 1 !important;
   border-radius: 50%;
   border: 1.5px solid #3A1912;
   background-color: #F8D64A;
@@ -410,6 +414,8 @@ html {
 .rmm-carousel-btn svg {
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
+  display: block;
 }
 
 .rmm-carousel-btn--prev {
