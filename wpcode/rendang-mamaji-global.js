@@ -13,20 +13,30 @@
   // Jika dibiarkan '', otomatis memakai URL bawaan HTML.
   // ===================================================================
   const RMM_MEDIA = {
-    hero: '',       // rendang-mamaji-hero.jpg
-    klasik: '',     // rendang-mamaji-klasik.jpg
-    komplit: '',    // rendang-mamaji-komplit.jpg
-    bumbuPekat: '', // rendang-mamaji-bumbu-pekat.jpg
-    hantaran: ''    // rendang-mamaji-hantaran.jpg
+    logo: '',        // rendang-mamaji-logo.png
+    hero: '',        // rendang-mamaji-hero.jpg
+    klasik: '',      // rendang-mamaji-klasik.jpg
+    komplit: '',     // rendang-mamaji-komplit.jpg
+    bumbuPekat: '',  // rendang-mamaji-bumbu-pekat.jpg
+    hantaran: '',    // rendang-mamaji-hantaran.jpg
+    bahanDaging: '', // rendang-mamaji-bahan-daging.jpg
+    bahanRempah: '', // rendang-mamaji-bahan-rempah.jpg
+    prosesSantan: '',// rendang-mamaji-proses-santan.jpg
+    prosesPekat: ''  // rendang-mamaji-proses-pekat.jpg
   };
 
   function applyWordPressMediaUrls() {
     const fallbackFileMap = {
+      logo: 'rendang-mamaji-logo.png',
       hero: 'hero-the-best-instan-rendang.jpg',
       klasik: '9.22.33',
       komplit: 'rendang-komplit.jpg',
       bumbuPekat: 'rendang-bumbu-pekat.jpg',
-      hantaran: 'rendang-hantaran.jpg'
+      hantaran: 'rendang-hantaran.jpg',
+      bahanDaging: 'rendang-mamaji-bahan-daging.jpg',
+      bahanRempah: 'rendang-mamaji-bahan-rempah.jpg',
+      prosesSantan: 'rendang-mamaji-proses-santan.jpg',
+      prosesPekat: 'rendang-mamaji-proses-pekat.jpg'
     };
 
     Object.keys(RMM_MEDIA).forEach(function (key) {

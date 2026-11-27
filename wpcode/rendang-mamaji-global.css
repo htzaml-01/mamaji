@@ -111,6 +111,14 @@ html {
   justify-self: center;
 }
 
+.rmm-brand-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
 .rmm-brand-starburst {
   width: 22px;
   height: 22px;
@@ -794,6 +802,85 @@ html {
   color: #3A1912;
 }
 
+.rmm-ingredients-block {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1.5px dashed rgba(58, 25, 18, 0.16);
+}
+
+.rmm-ingredients-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.rmm-ingredients-title {
+  font-family: 'Rubik', 'DM Sans', sans-serif;
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: #3A1912;
+  margin: 0;
+}
+
+.rmm-ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.rmm-ingredient-card {
+  margin: 0;
+  background-color: #FDF3E3;
+  border: 1.5px solid rgba(58, 25, 18, 0.16);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rmm-ingredient-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(58, 25, 18, 0.1);
+}
+
+.rmm-ingredient-thumb {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #E7D6BE;
+}
+
+.rmm-ingredient-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.rmm-ingredient-card:hover .rmm-ingredient-thumb img {
+  transform: scale(1.05);
+}
+
+.rmm-ingredient-caption {
+  padding: 12px 14px;
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #3A1912;
+}
+
+.rmm-footer-logo-img {
+  height: 46px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
 /* =====================================================================
    6. KEMITRAAN, PESAN ANTAR & LOKASI
    ===================================================================== */
@@ -1049,12 +1136,20 @@ html {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .rmm-ingredients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .rmm-footer-top {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 680px) {
+  .rmm-brand-logo-img {
+    height: 34px;
+  }
+
   .rmm-hero-notch {
     width: 34px;
     height: 18px;
@@ -1113,5 +1208,15 @@ html {
   .rmm-craft-grid,
   .rmm-footer-top {
     grid-template-columns: 1fr;
+  }
+
+  .rmm-ingredients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .rmm-ingredient-caption {
+    font-size: 10.5px;
+    padding: 10px 8px;
   }
 }
