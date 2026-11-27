@@ -87,7 +87,7 @@ button {
 .navbar {
   width: min(1320px, 95%);
   margin: 0 auto;
-  height: 56px;
+  height: 76px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -138,41 +138,23 @@ button {
 .brand-logo {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 10px;
   color: var(--espresso);
   justify-self: center;
 }
 
 .brand-logo-img {
-  height: 40px;
+  height: 64px;
   width: auto;
   display: block;
   flex-shrink: 0;
   object-fit: contain;
-}
-
-.brand-starburst {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.brand-logo:hover .brand-logo-img {
-  height: 40px;
-  width: auto;
-  display: block;
-  flex-shrink: 0;
-  object-fit: contain;
-}
-
-.brand-starburst {
-  transform: rotate(45deg);
+  filter: drop-shadow(0 2px 6px rgba(58, 25, 18, 0.16));
 }
 
 .brand-wordmark {
   font-family: var(--font-serif);
-  font-size: clamp(1.02rem, 4vw, 1.38rem);
+  font-size: clamp(0.92rem, 3.6vw, 1.38rem);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1;
@@ -909,11 +891,15 @@ button {
 }
 
 .footer-logo-img {
-  height: 46px;
-  width: auto;
+  width: 96px;
+  height: 96px;
   display: block;
   flex-shrink: 0;
   object-fit: contain;
+  background-color: var(--cream);
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 /* ============================================================
@@ -1138,8 +1124,12 @@ button {
 }
 
 @media (max-width: 680px) {
+  .navbar {
+    height: 68px;
+  }
+
   .brand-logo-img {
-    height: 34px;
+    height: 54px;
   }
 
   .intro-showcase {
