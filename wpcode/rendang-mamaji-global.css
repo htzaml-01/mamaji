@@ -274,32 +274,20 @@ html {
 }
 
 .rmm-editorial-split {
-  max-width: 960px;
-  margin: 0 auto 48px;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  align-items: end;
-  gap: 36px;
+  max-width: 880px;
+  margin: 0 auto 44px;
+  text-align: center;
 }
 
 .rmm-editorial-heading {
   font-family: 'Rubik', 'DM Sans', sans-serif;
-  font-size: clamp(50px, 7.2vw, 92px);
+  font-size: clamp(28px, 3.8vw, 48px);
   font-weight: 900;
-  line-height: 0.88;
-  letter-spacing: -0.045em;
-  text-align: left;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-align: center;
   color: #3A1912;
   margin: 0;
-}
-
-.rmm-editorial-lead {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.55;
-  color: #6C4D40;
-  max-width: 340px;
-  justify-self: end;
 }
 
 .rmm-carousel {
@@ -1160,18 +1148,11 @@ html {
   }
 
   .rmm-editorial-split {
-    grid-template-columns: 1fr;
-    gap: 16px;
     margin-bottom: 34px;
   }
 
   .rmm-editorial-heading {
-    font-size: clamp(39px, 11vw, 54px);
-  }
-
-  .rmm-editorial-lead {
-    justify-self: start;
-    max-width: 100%;
+    font-size: clamp(26px, 6.8vw, 34px);
   }
 
   .rmm-carousel-slide {
