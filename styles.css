@@ -144,8 +144,8 @@ button {
 }
 
 .brand-logo-img {
+  width: 64px;
   height: 64px;
-  width: auto;
   display: block;
   flex-shrink: 0;
   object-fit: contain;
@@ -1129,7 +1129,8 @@ button {
   }
 
   .brand-logo-img {
-    height: 54px;
+    width: 52px;
+    height: 52px;
   }
 
   .intro-showcase {
